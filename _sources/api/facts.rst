@@ -1,5 +1,5 @@
 randomly.facts
-==============
+=================
 
 .. automodule:: randomly.facts
    :members:
