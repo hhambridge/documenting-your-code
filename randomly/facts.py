@@ -4,6 +4,22 @@ from typing import Union
 
 
 def generate_random_fact(output_format: str, language: str) -> Union[str, dict]:
+    """
+    Generates a random fact based on the user specified inputs
+
+    Parameters
+    ----------
+    output_format : str
+        format to return; "html", "json", "txt", or "md"
+    language : str
+        language to return; "en" or "de"
+
+    Returns
+    -------
+    fact : dict if output_format = "json", str otherwise
+        a random fact pulled from uselessfacts.jsph.pl
+
+    """
     # Verify inputs are valid
     if language not in {"en", "de"}:
         raise ValueError(f"{language} is not supported.")
